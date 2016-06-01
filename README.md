@@ -21,6 +21,6 @@ Visualizing-Data/bivariate_bar_graph.png
 The y-axis scale close to 0 means positive, close to 1 means negative.
 
 The group of "none" shows the highest fraction, which means most of the time or all of the time young adults feel that  "life was not worth living.".
-The group of "worked on a project for school" shows the lowest fraction. However, since the count of very few, it may does not reflect correctly. 
+The group of "worked on a project for school" shows the lowest fraction. However, since the count of the group is very few, it may does not reflect correctly. 
 The second lowest fraction of group is "talked about your school work or grades" and following "gone to a religious service or church-related event".
 
