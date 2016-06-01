@@ -3,9 +3,14 @@ Assignment: Creating graphs for your data
 
 STEP 1: Create graphs of your variables one at a time (univariate graphs).
 
-Univariate_bar_graph
+The following bar graph is the response for the below question.
+"Which of the things have you done with your MOTHER in the past 4 weeks?"
 
-Examine both their center and spread.
+Visualizing-Data/Univariate_bar_graph.png
+
+
+
+
 
 STEP 2: Create a graph showing the association between your explanatory and response variables (bivariate graph).
 
