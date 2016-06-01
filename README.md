@@ -6,9 +6,9 @@ STEP 1: Create graphs of your variables one at a time (univariate graphs).
 The following bar graph is the response for the below question.
 "Which of the things have you done with your MOTHER in the past 4 weeks?"
 
-Visualizing-Data/Univariate_bar_graph.png
+Visualizing-Data/Univariate_bar_graph.png <attached file>
 
-
+Most popular response was "gone shopping". The second commone responses were "gone to a religious service or church-related event" and "talked about someone you’re dating, or a party you went to".
 
 
 
