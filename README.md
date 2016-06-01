@@ -8,7 +8,7 @@ The following bar graph is the response for the below question.
 
 Visualizing-Data/Univariate_bar_graph.png <attached file>
 
-Most popular response was "gone shopping". The second commone responses were "gone to a religious service or church-related event" and "talked about someone you’re dating, or a party you went to".
+Most popular response was "gone shopping". The second common responses were "gone to a religious service or church-related event" and "talked about someone you’re dating, or a party you went to".
 
 
 
@@ -20,10 +20,7 @@ Visualizing-Data/bivariate_bar_graph.png
 
 The y-axis scale close to 0 means positive, close to 1 means negative.
 
-The group of none with mom shows closest to 1, means most of the time or all of the time feel that  "life was not worth living.".
-The 
-Your output should be interpretable (i.e. organized and labeled).
+The group of "none" shows the highest fraction, which means most of the time or all of the time young adults feel that  "life was not worth living.".
+The group of "worked on a project for school" shows the lowest fraction. However, since the count of very few, it may does not reflect correctly. 
+The second lowest fraction of group is "talked about your school work or grades" and following "gone to a religious service or church-related event".
 
-WHAT TO SUBMIT:
-
-Once you have written a successful program that creates univariate and bivariate graphs, create a blog entry where you post your program and the graphs that you have created. Write a few sentences describing what your graphs reveal in terms of your individual variables and the relationship between them.
