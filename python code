@@ -1,0 +1,102 @@
+# Visualizing data   
+# week4 assignment for Data Management and Visualization
+
+"""
+Created on Tue May 31 15:53:12 2016
+
+@author: taehee Jeong
+"""
+
+# import libraries
+import pandas as pd
+import numpy as np
+
+#%% Load data
+path='C:/Bigdata/Data Analysis and Interpretation/Dataset/Adolescent Health/'
+data = pd.read_csv(path+'addhealth_pds.csv', low_memory=False)
+
+
+#upper-case all DataFrame column names - place afer code for loading data aboave
+data.columns = map(str.upper, data.columns)
+
+# bug fix for display formats to avoid run time errors - put after code for loading data above
+pd.set_option('display.float_format', lambda x:'%f'%x)
+
+#setting variables you will be working with to numeric
+data['H1WP17A'] = data['H1WP17A'].convert_objects(convert_numeric=True)
+data['H1WP17B'] = data['H1WP17B'].convert_objects(convert_numeric=True)
+data['H1WP17C'] = data['H1WP17C'].convert_objects(convert_numeric=True)
+data['H1WP17D'] = data['H1WP17D'].convert_objects(convert_numeric=True)
+data['H1WP17E'] = data['H1WP17E'].convert_objects(convert_numeric=True)
+data['H1WP17F'] = data['H1WP17F'].convert_objects(convert_numeric=True)
+data['H1WP17G'] = data['H1WP17G'].convert_objects(convert_numeric=True)
+data['H1WP17H'] = data['H1WP17H'].convert_objects(convert_numeric=True)
+data['H1WP17I'] = data['H1WP17I'].convert_objects(convert_numeric=True)
+data['H1WP17J'] = data['H1WP17J'].convert_objects(convert_numeric=True)
+data['H1WP17K'] = data['H1WP17K'].convert_objects(convert_numeric=True)
+data['H1FS19'] = data['H1FS19'].convert_objects(convert_numeric=True)
+
+#%% Setting aside missing data
+#make a copy of my data
+data1 = data.copy()
+
+def EXPwMOM (row):
+   if row['H1WP17A'] == 1 :
+      return 1
+   elif row['H1WP17B'] == 1 :
+      return 2
+   elif row['H1WP17C'] == 1 :
+      return 3
+   elif row['H1WP17D'] == 1 :
+      return 4
+   elif row['H1WP17E'] == 1 :
+      return 5
+   elif row['H1WP17F'] == 1 :
+      return 6
+   elif row['H1WP17G'] == 1 :
+      return 7
+   elif row['H1WP17H'] == 1 :
+      return 8   
+   elif row['H1WP17I'] == 1 :
+      return 9      
+   elif row['H1WP17J'] == 1 :
+      return 10 
+   else :
+      return 11
+      
+data1['EXPwMOM'] = data1.apply (lambda row: EXPwMOM (row), axis=1)
+
+#%%univariate bar graph for categorical variables
+
+# First hange format from numeric to categorical
+# change format from numeric to categorical
+data1['EXPwMOM'] = data1['EXPwMOM'].astype('category')
+
+# !pip install seaborn
+import seaborn
+import matplotlib.pyplot as plt
+
+seaborn.countplot(x='EXPwMOM', data=data1)
+plt.text(3,4300,'1:gone shopping')
+plt.text(3,4000,'2:played a sport')
+plt.text(3,3700,'3:gone to a religious service or church-related event')
+plt.text(3,3400,'4:talked about someone you are dating or party you went to')
+plt.text(3,3100,'5:gone to a movie, play, museum, concert, or sports event')
+plt.text(3,2800,'6:had a talk about a personal problem you were having')
+plt.text(3,2500,'7:had a serious argument about your behavior')
+plt.text(3,2200,'8:talked about your school work or grades')
+plt.text(3,1900,'9:worked on a project for school')
+plt.text(3,1600,'10:talked about other things you are doing in school')
+plt.text(3,1300,'11:none')
+plt.xlabel('experience with mom for last 4 weeks',fontsize=13)
+plt.title('Experience with Mom in the Past 4 weeks Among Young Adult in Adolescent Health Study',fontsize=15)
+
+
+#%% bivariate graph
+#Create a graph showing the association between your explanatory and response variables (bivariate graph)
+
+# bivariate bar graph C->Q
+seaborn.factorplot(x='EXPwMOM', y='H1FS19', data=data1, kind="bar", ci=None)
+plt.xlabel('Experience with mom')
+plt.ylabel('life was not worth living')
+plt.title('You felt life was not worth living',fontsize=15)
