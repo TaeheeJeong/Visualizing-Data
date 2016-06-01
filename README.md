@@ -14,6 +14,14 @@ Most popular response was "gone shopping". The second commone responses were "go
 
 STEP 2: Create a graph showing the association between your explanatory and response variables (bivariate graph).
 
+The following bivariate bar graph shows the relationship between the experience with mom and how young adults feel about their life.
+
+Visualizing-Data/bivariate_bar_graph.png
+
+The y-axis scale close to 0 means positive, close to 1 means negative.
+
+The group of none with mom shows closest to 1, means most of the time or all of the time feel that  "life was not worth living.".
+The 
 Your output should be interpretable (i.e. organized and labeled).
 
 WHAT TO SUBMIT:
